@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled by Jules | Mother of the Bride Styling</title>
+  <meta name="description" content="Private styling for mothers of the bride. Body image consulting, color analysis, and personal shopping so you feel confident and coordinated on your daughter's wedding day.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --champagne: #F5E6D3;
+      --blush: #E8D5C4;
+      --warm-white: #FAF7F4;
+      --charcoal: #2C2C2C;
+      --soft-black: #1A1A1A;
+      --muted-rose: #C4A882;
+      --deep-rose: #9B7E6B;
+      --sage: #A8B5A0;
+      --light-sage: #D4DED0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--charcoal);
+      background: var(--warm-white);
+      font-weight: 300;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    nav.scrolled {
+      background: rgba(250, 247, 244, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+    }
+
+    .nav-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--soft-black);
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--deep-rose); }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--charcoal);
+      margin: 6px 0;
+      transition: 0.3s;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem;
+      background: linear-gradient(170deg, var(--warm-white) 0%, var(--champagne) 50%, var(--blush) 100%);
+      position: relative;
+    }
+
+    .hero-content { max-width: 700px; }
+
+    .hero-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--deep-rose);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      line-height: 1.1;
+      color: var(--soft-black);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--deep-rose);
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--charcoal);
+      max-width: 520px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.9;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem 2.8rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--charcoal);
+      color: var(--charcoal);
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--charcoal);
+      color: var(--warm-white);
+    }
+
+    .btn-filled {
+      background: var(--charcoal);
+      color: var(--warm-white);
+    }
+
+    .btn-filled:hover {
+      background: transparent;
+      color: var(--charcoal);
+    }
+
+    /* SECTIONS */
+    section { padding: 6rem 2rem; }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted-rose);
+      margin-bottom: 1rem;
+    }
+
+    .section-heading {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--soft-black);
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .section-body {
+      font-size: 1rem;
+      max-width: 600px;
+      line-height: 1.9;
+      color: #555;
+    }
+
+    /* ABOUT */
+    .about { background: var(--warm-white); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-image {
+      aspect-ratio: 3/4;
+      background: linear-gradient(135deg, var(--champagne), var(--blush));
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--deep-rose);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    /* PROCESS */
+    .process { background: var(--champagne); }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .step {
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .step-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--deep-rose);
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+
+    .step h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      color: var(--soft-black);
+    }
+
+    .step p {
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.8;
+    }
+
+    /* SERVICES */
+    .services { background: var(--warm-white); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .service-card {
+      background: white;
+      padding: 2.5rem;
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: box-shadow 0.3s;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    }
+
+    .service-tag {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted-rose);
+      margin-bottom: 0.8rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      color: var(--soft-black);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-price {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--deep-rose);
+      margin-bottom: 1rem;
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+    }
+
+    .service-includes {
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-includes li {
+      font-size: 0.82rem;
+      color: #777;
+      padding: 0.35rem 0;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .service-includes li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      width: 6px;
+      height: 1px;
+      background: var(--muted-rose);
+    }
+
+    /* SIGNATURE PACKAGE */
+    .signature {
+      background: var(--soft-black);
+      color: var(--warm-white);
+      text-align: center;
+    }
+
+    .signature .section-label { color: var(--muted-rose); }
+
+    .signature .section-heading { color: var(--warm-white); }
+
+    .signature-body {
+      font-size: 1.05rem;
+      max-width: 580px;
+      margin: 0 auto 2rem;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .signature-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: var(--muted-rose);
+      margin-bottom: 0.5rem;
+    }
+
+    .signature-note {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 3rem;
+    }
+
+    .signature-includes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+      text-align: left;
+    }
+
+    .signature-includes li {
+      list-style: none;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      padding: 0.5rem 0;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .signature-includes li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.85rem;
+      width: 6px;
+      height: 1px;
+      background: var(--muted-rose);
+    }
+
+    .btn-light {
+      border-color: rgba(255,255,255,0.3);
+      color: var(--warm-white);
+    }
+
+    .btn-light:hover {
+      background: var(--warm-white);
+      color: var(--soft-black);
+      border-color: var(--warm-white);
+    }
+
+    /* TESTIMONIAL */
+    .testimonial {
+      background: var(--blush);
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+
+    .testimonial blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-style: italic;
+      font-weight: 300;
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.5;
+      color: var(--soft-black);
+    }
+
+    .testimonial cite {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--deep-rose);
+    }
+
+    /* FAQ */
+    .faq { background: var(--warm-white); }
+
+    .faq-list {
+      max-width: 700px;
+      margin: 3rem auto 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      padding: 1.5rem 0;
+    }
+
+    .faq-question {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--soft-black);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      padding: 0;
+    }
+
+    .faq-question::after {
+      content: '+';
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: var(--muted-rose);
+      transition: transform 0.3s;
+    }
+
+    .faq-question.active::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .faq-answer.open {
+      max-height: 300px;
+      padding-top: 1rem;
+    }
+
+    .faq-answer p {
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.8;
+    }
+
+    /* CONTACT / CTA */
+    .cta {
+      background: linear-gradient(170deg, var(--champagne) 0%, var(--blush) 100%);
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    .cta .section-heading { margin-bottom: 1rem; }
+
+    .cta p {
+      font-size: 1rem;
+      color: #666;
+      max-width: 500px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.9;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--soft-black);
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 3rem 2rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: block; }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(250, 247, 244, 0.98);
+        padding: 2rem;
+        gap: 1.5rem;
+        text-align: center;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .about-image { max-height: 400px; }
+
+      .process-steps {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .signature-includes {
+        grid-template-columns: 1fr;
+      }
+
+      section { padding: 4rem 1.5rem; }
+    }
+
+    /* ANIMATIONS */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-brand">Styled by Jules</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#signature">Signature Package</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="btn" style="padding: 0.6rem 1.5rem; font-size: 0.65rem;">Book a Call</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content fade-in">
+      <p class="hero-eyebrow">Mother of the Bride Styling</p>
+      <h1>Confidence is the most <em>beautiful</em> thing you can wear</h1>
+      <p>Private body image consulting, color analysis, and personal shopping for mothers of the bride. You deserve to feel as radiant as the occasion.</p>
+      <a href="#contact" class="btn">Start Your Styling Journey</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-image fade-in">
+          Photo of Julie
+        </div>
+        <div class="fade-in">
+          <p class="section-label">Meet Julie</p>
+          <h2 class="section-heading">A different kind of styling</h2>
+          <p class="section-body">
+            Every mother wants to feel her best at her daughter's wedding. But for most women, finding something to wear is stressful, confusing, and quietly lonely. Browsing alone, trying on dresses that don't feel right, settling for something safe because no one helped them understand what would actually work.
+          </p>
+          <br>
+          <p class="section-body">
+            Julie works inside a bridal boutique, which means she meets mothers of the bride at the exact moment they're beginning to think about their own look. She sees the uncertainty firsthand. She understands the emotions. And she's built a private styling practice around guiding each mother through a clear, personal process that ends with real confidence.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="section-inner">
+      <div style="text-align: center; margin-bottom: 1rem;">
+        <p class="section-label">The Journey</p>
+        <h2 class="section-heading">Three steps to your wedding day look</h2>
+      </div>
+      <div class="process-steps">
+        <div class="step fade-in">
+          <div class="step-number">01</div>
+          <h3>Understand Your Body</h3>
+          <p>A private consultation where Julie evaluates body shape, proportion, and silhouette. You leave with a clear understanding of what styles flatter you and why.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-number">02</div>
+          <h3>Understand Your Colors</h3>
+          <p>A seasonal color analysis that identifies the shades that enhance your natural coloring and photograph well alongside the wedding palette.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-number">03</div>
+          <h3>Find the Outfit</h3>
+          <p>A half-day personal shopping experience with a strategy in hand. No aimless browsing. No second-guessing. Just clear, guided decisions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-inner">
+      <p class="section-label">Services</p>
+      <h2 class="section-heading">What Julie offers</h2>
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <p class="service-tag">Starting Point</p>
+          <h3>In-Home Styling Consultation</h3>
+          <p class="service-price">$150 &middot; 90 minutes</p>
+          <p>A private consultation at your home focused on understanding what styles, proportions, and silhouettes flatter your body.</p>
+          <ul class="service-includes">
+            <li>Body image consultation</li>
+            <li>Silhouette and proportion guidance</li>
+            <li>Neckline and fabric recommendations</li>
+            <li>Wardrobe review of existing pieces</li>
+          </ul>
+        </div>
+        <div class="service-card fade-in">
+          <p class="service-tag">Find Your Palette</p>
+          <h3>Color Analysis</h3>
+          <p class="service-price">$295 &middot; 90 minutes</p>
+          <p>A personalized color consultation that identifies the shades that enhance your natural coloring and photograph well with the wedding palette.</p>
+          <ul class="service-includes">
+            <li>Seasonal color analysis with professional draping</li>
+            <li>Personalized color palette</li>
+            <li>Digital color guide for reference while shopping</li>
+            <li>Dress and accessory color guidance</li>
+          </ul>
+        </div>
+        <div class="service-card fade-in">
+          <p class="service-tag">The Main Event</p>
+          <h3>Half-Day Personal Shopping</h3>
+          <p class="service-price">$395 &middot; 3 hours</p>
+          <p>Julie shops alongside you to find a mother-of-the-bride outfit that flatters your body, aligns with your color palette, and complements the wedding aesthetic.</p>
+          <ul class="service-includes">
+            <li>Pre-shopping style strategy</li>
+            <li>Accompanied dress shopping</li>
+            <li>Fit and silhouette guidance in the dressing room</li>
+            <li>Honest, supportive styling feedback</li>
+          </ul>
+        </div>
+        <div class="service-card fade-in">
+          <p class="service-tag">Add-On</p>
+          <h3>Wardrobe Review</h3>
+          <p class="service-price">$75</p>
+          <p>Julie reviews pieces you already own to determine whether any could be incorporated into the wedding look or styled to complement a new dress.</p>
+          <ul class="service-includes">
+            <li>Assessment of existing wardrobe pieces</li>
+            <li>Coordination with new outfit selections</li>
+            <li>Accessory and shoe pairing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE PACKAGE -->
+  <section class="signature" id="signature">
+    <div class="section-inner">
+      <p class="section-label">The Complete Experience</p>
+      <h2 class="section-heading">The Radiant Mother Experience</h2>
+      <p class="signature-body">
+        The complete mother-of-the-bride styling journey. From discovering what flatters, to identifying the right colors, to finding the perfect outfit. This is the most seamless way to work with Julie, and the one most clients choose.
+      </p>
+      <div class="signature-price">$650</div>
+      <p class="signature-note">Individual value: $915 &middot; You save $265</p>
+      <ul class="signature-includes">
+        <li>In-Home Styling Consultation</li>
+        <li>Seasonal Color Analysis</li>
+        <li>Half-Day Personal Shopping</li>
+        <li>Wardrobe Review</li>
+      </ul>
+      <a href="#contact" class="btn btn-light">Book the Experience</a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial">
+    <div class="section-inner fade-in">
+      <blockquote>"I went from dreading the process to actually loving what I chose. Julie made me feel like I mattered just as much as the bride."</blockquote>
+      <cite>Coming Soon &mdash; Founding Client Testimonials</cite>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="section-inner">
+      <div style="text-align: center;">
+        <p class="section-label">Questions</p>
+        <h2 class="section-heading">What to expect</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">Where do sessions take place?</button>
+          <div class="faq-answer">
+            <p>The styling consultation happens at your home, where Julie can review your existing wardrobe and understand your comfort zone. Color analysis can take place at your home or Julie's studio. Personal shopping happens at curated stores selected based on your style profile.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How far in advance should I book?</button>
+          <div class="faq-answer">
+            <p>Three to six months before the wedding is ideal. This gives plenty of time for the full process, including any alterations. That said, Julie has worked with shorter timelines when needed.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What if I already have a dress in mind?</button>
+          <div class="faq-answer">
+            <p>That's a great starting point. Julie can begin with a styling consultation to make sure the dress works for your body and coloring. From there, she'll help with accessories, shoes, and coordination with the wedding palette.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Do you only work with mothers of the bride?</button>
+          <div class="faq-answer">
+            <p>Julie's practice is focused exclusively on mothers of the bride (and groom). This specialization means every part of the experience is designed for this specific occasion and the emotions that come with it.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What about the bridal client rate?</button>
+          <div class="faq-answer">
+            <p>When a bride purchases her gown at Julie's partnering boutique, her mother receives preferred pricing on all services. Ask Julie for details when you reach out.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="section-inner fade-in">
+      <p class="section-label">Let's Get Started</p>
+      <h2 class="section-heading">Ready to feel confident on your daughter's wedding day?</h2>
+      <p>Reach out to schedule a complimentary introductory call. Julie will learn about the wedding, your vision, and how she can help.</p>
+      <a href="mailto:hello@styledbyjules.com" class="btn btn-filled">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Styled by Jules &middot; Mother of the Bride Styling</p>
+    <p style="margin-top: 0.5rem;">
+      <a href="https://www.instagram.com/styledbyjules" target="_blank">Instagram</a>
+    </p>
+  </footer>
+
+  <script>
+    // Nav scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile toggle
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+
+    // Close nav on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
