@@ -222,6 +222,7 @@
       aspect-ratio: 3/4;
       background: linear-gradient(135deg, var(--champagne), var(--blush));
       border-radius: 2px;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -229,6 +230,13 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.2rem;
       font-style: italic;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 2px;
     }
 
     /* PROCESS */
@@ -616,7 +624,7 @@
     <div class="section-inner">
       <div class="about-grid">
         <div class="about-image fade-in">
-          Photo of Julie
+          <img src="julie-headshot.png" alt="Julie - Mother of the Bride Stylist">
         </div>
         <div class="fade-in">
           <p class="section-label">Meet Julie</p>
